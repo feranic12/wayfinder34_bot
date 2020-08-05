@@ -28,3 +28,7 @@ class BotHandler:
     def get_chat_id(self, update):
         chat_id = update['message']['chat']['id']
         return chat_id
+
+    def get_name(self, update):
+        name = update['message']['chat']['first_name']
+        return name

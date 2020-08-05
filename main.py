@@ -7,7 +7,8 @@ def main():
     update_id = my_bot.get_last_update()['update_id']
     while True:
         if update_id == my_bot.get_last_update()['update_id']:
-            my_bot.send_message(my_bot.get_chat_id(my_bot.get_last_update()), 'test')
+            my_bot.send_message(my_bot.get_chat_id(my_bot.get_last_update()),\
+                'Привет, ' + my_bot.get_name(my_bot.get_last_update()))
             update_id += 1
         sleep(1)
 
