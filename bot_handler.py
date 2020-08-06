@@ -22,8 +22,11 @@ class BotHandler:
 
     def get_last_update(self):
         results = self.get_updates()
-        total_updates = len(results) - 1
-        return results[total_updates]
+        if len(results) == 0:
+            return None
+        else:
+            total_updates = len(results) - 1
+            return results[total_updates]
 
     def get_chat_id(self, update):
         chat_id = update['message']['chat']['id']
